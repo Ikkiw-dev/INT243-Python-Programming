@@ -9,7 +9,7 @@
 
 #Exercise
 
-#ans key
+#ans key (Exam will be like this)
 for i in range(1,6):
     print("{}".format("*"*i))
 

@@ -20,9 +20,10 @@
 #Task 4
 l = 10
 while l >= 1:
-    print(l, end = ",")
-    if l % 2 == 0:
-        print("x,", end = "")
+    if l %2 == 0:
+        print(l, end = ",x,")
+    elif l == 1:
+        print(l, end = ",y")
     else:
-        print("y,", end = "")
-    l = l-1
+        print(l, end = ",y,")
+    l -= 1
