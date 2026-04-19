@@ -1,0 +1,154 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "90b7e45e-0cbd-4b6d-8227-107a89c49fbb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9\n"
+     ]
+    }
+   ],
+   "source": [
+    "#ex. sum 2 numbers\n",
+    "def add(a,b):\n",
+    "    return(a+b)\n",
+    "\n",
+    "print(add(a=5,b=4))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "e1cc3deb-e9f3-4d6d-acb8-88e4838800f4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "total = 0\n",
+    "\n",
+    "def increment():\n",
+    "    global total\n",
+    "    \n",
+    "    i = 10\n",
+    "    while i > 0:\n",
+    "        total += 1\n",
+    "        i -= 1\n",
+    "\n",
+    "    return total\n",
+    "\n",
+    "increment()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "75c52306-b601-4c92-8f6d-92d483a5344b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10 is larger than 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Exercise 1 python compare 2 numbers\n",
+    "\n",
+    "def compare_num(n1,n2):\n",
+    "    if n1 > n2:\n",
+    "        print(f\"{n1} is larger than {n2}\")\n",
+    "    elif n1 < n2:\n",
+    "        print(f\"{n1} is smaller than {n2}\")\n",
+    "    else:\n",
+    "        print(\"Both number are equal\")\n",
+    "\n",
+    "compare_num(n1=10,n2=5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "645c042a-215c-4f63-bf2a-62150a2ec0df",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[2, 7, 4, 5, 6]"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Exercise 2 -> List manipulator\n",
+    "def list_manipulation(lst, command, value=None, index=None):\n",
+    "    default_command = ['add','remove','modify']\n",
+    "    command = str(command)\n",
+    "\n",
+    "    if command not in default_command:\n",
+    "        return \"This command does not exist.\"\n",
+    "    elif command == 'add':\n",
+    "        lst.append(value)\n",
+    "    elif command == 'remove':\n",
+    "        lst.pop() #or use indexing instead (index -1) -> lst = lst[:-1]\n",
+    "    elif command == 'modify':\n",
+    "        lst[index] = value\n",
+    "\n",
+    "    return lst\n",
+    "\n",
+    "list_manipulation([2,3,4,5,6], 'modify', 7,1)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f1d7ce03-eae3-48dd-82d0-3afd7d14e966",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
