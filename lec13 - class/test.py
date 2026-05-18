@@ -16,3 +16,8 @@ df['company_size'] = df['company_size'].replace({'S':'Small','M':'Medium','L':'L
 df.to_csv("submission.csv", index=False)
 
 print(df.head(5))
+
+#2
+#What data types for each columns and check if there are any missing (null) values
+for col in df.columns:
+    print("{}, type {}".format(col,df[col].dtypes))
